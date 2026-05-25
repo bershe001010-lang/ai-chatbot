@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
-    api_key="GROQ_API_KEY_REMOVED"
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 HTML = """
